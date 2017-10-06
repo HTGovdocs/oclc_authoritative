@@ -1,5 +1,6 @@
 require 'dotenv'
 require 'oclc_authoritative'
+
 Dotenv.load
 RSpec.describe OclcAuthoritative do
   include OclcAuthoritative
