@@ -3,6 +3,7 @@ require 'dotenv'
 
 module OclcAuthoritative
   Dotenv.load
+  Mongo::Logger.logger.level = ::Logger::FATAL
   @@mc = Mongo::Client.new([ENV['mongo_host']+':'+ENV['mongo_port']],
                            :database => ENV['oclc_db'])
   def resolve_oclc(alleged_oclc)
